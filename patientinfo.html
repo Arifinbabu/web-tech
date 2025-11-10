@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Registration</title>
+</head>
+<body>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <fieldset>
+        <legend>Patient Information</legend>
+
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" placeholder="Full name" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" placeholder="Age" required><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="Male" required>Male
+        <input type="radio" id="female" name="gender" value="Female" required>Female
+        <input type="radio" id="other" name="gender" value="Other" required>Other<br>
+
+        <label for="disease">Disease:</label>
+        <select id="disease" name="disease" required>
+            <option value="">Select Disease</option>
+            <option value="Flu">Flu</option>
+            <option value="Migraine">Migraine</option>
+            <option value="Gastritis">Gastritis</option>
+            <option value="Allergy">Allergy</option>
+            <option value="Other">Other</option>
+        </select><br>
+
+        <label>Symptoms:</label>
+        <input type="checkbox" id="fever" name="symptoms[]" value="Fever">Fever
+        <input type="checkbox" id="cough" name="symptoms[]" value="Cough">Cough
+        <input type="checkbox" id="headache" name="symptoms[]" value="Headache">Headache
+        <input type="checkbox" id="fatigue" name="symptoms[]" value="Fatigue">Fatigue
+        <input type="checkbox" id="nausea" name="symptoms[]" value="Nausea">Nausea<br>
+
+        <label for="doctor">Doctor:</label>
+        <select id="doctor" name="doctor" required>
+        <option value="">Select Doctor</option>
+        <option value="Dr. A. Rahman (Medicine)">Dr. A. Rahman (Medicine)</option>
+        <option value="Dr. B. Chowdhury (Neurology)">Dr. B. Chowdhury (Neurology)</option>
+        <option value="Dr. C. Akter (Gastro)">Dr. C. Akter (Gastro)</option>
+        </select><br>
+
+        <label for="visitDate">Date:</label>
+        <input type="date" id="visitDate" name="visitDate" required><br>
+
+        <label for="preferredSlot">Preferred Slot:</label>
+        <select id="preferredSlot" name="preferredSlot" required>
+            <option value="">Select Time Slot</option>
+            <option value="10:00-10:30 | Dr. Rahman | R-101">10.00 - 10.30 (Dr. Rahman, R-101)</option>
+            <option value="10:30-11:00 | Dr. Rahman | R-101">10.30 - 11.00 (Dr. Rahman, R-101)</option>
+            <option value="11:00-11:30 | Dr. Chowdhury | R-202">11.00 - 11.30 (Dr. Chowdhury, R-202)</option>
+            <option value="11:30-12:00 | Dr. Akter | R-303">11.30 - 12.00 (Dr. Akter, R-303)</option>
+            <option value="12:00-12:30 | Dr. Akter | R-303" disabled>12.00 - 12.30 (Booked)</option>
+        </select><br>
+
+        <input type="submit" id="submitInfo" name="submitInfo" value="Save Patient Info">
+        <input type="reset" id="resetInfo" name="resetInfo" value="Reset">
+    </fieldset>
+</form>
+
+<table border="1"> 
+    <caption>Clinic Time Schedule</caption>
+    <tr>
+        <th>Time Slot</th>
+        <th>Doctor</th>
+        <th>Room</th>
+        <th>Status</th>
+    </tr>
+
+    <tr>
+        <td>10.00 - 10.30</td>
+        <td rowspan="2">Dr. A. Rahman</td>
+        <td rowspan="2">R-101</td>
+        <td>Open</td>
+    </tr>
+    <tr>
+        <td>10.30 - 11.00</td>
+        <td>Open</td>
+    </tr>
+
+    <tr>
+        <td>11.00 - 11.30</td>
+        <td>Dr. B. Chowdhury</td>
+        <td>R-202</td>
+        <td>Open</td>
+    </tr>
+
+    <tr>
+        <td>11.30 - 12.00</td>
+        <td rowspan="2">Dr. C. Akter</td>
+        <td rowspan="2">R-303</td>
+        <td>Open</td>
+    </tr>
+    <tr>
+        <td>12.00 - 12.30</td>
+        <td>Booked</td>
+    </tr>
+
+    <tr>
+        <td colspan="4">If a slot is booked, please select another available time.</td>
+    </tr>
+</table>
+
+ </form>
+
+        <form action="" method="post">
+
+            <fieldset>
+                <legend>Payement Details</legend>
+
+                <label for="paymentType">Payment Type</label>
+                <input type="radio" id="bkash" name="paymentType" value="bkash">bkash
+                <input type="radio" id="rocket" name="paymentType" value="rocket">roket
+                <input type="radio" id="netBanking" name="paymentType" value="netBanking">NAet Banking
+            </fieldset>
+
+        </form>
+
+</body>
+</html>
