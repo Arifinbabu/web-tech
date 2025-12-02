@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Floating Contact Widget</title>
+
+    <style>
+        .widget {
+            position: fixed;          
+            bottom: 20px;          
+            right: 20px;
+            background-color: firebrick;
+            color: white;
+            padding: 15px;
+            border: 2px solid blueviolet;
+            border-radius: 10px;
+            width: 180px;
+            z-index: 9999;            
+            font-family: Arial, sans-serif;
+            transition: 0.3s;
+        }
+        .widget:hover {
+            background-color: lightcoral;
+            cursor: pointer;
+        }
+        .widget a {
+            color: yellow;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Scroll Down to See the Floating Contact Widget</h1>
+    <p>Content</p>
+    <p>scrolling</p>
+
+    
+    <div class="widget">
+        <strong>Contact Us</strong><br><br>
+
+        Phone: 01712345678 <br>
+        Email: <a href="mailto:support@example.com">support@example.com</a>
+    </div>
+
+</body>
+</html>
