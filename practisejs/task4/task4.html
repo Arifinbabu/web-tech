@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script src="script.js"></script>
+    <title>Student Management System</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Management System</h2>
+
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="text" id="roll" placeholder="Enter Roll">
+    <input type="text" id="department" placeholder="Enter Department">
+    <button id="addStudentBtn">Add Student</button>
+
+    <table id="studentTable">
+            <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Department</th>
+                <th>Action</th>
+            </tr>
+    </table>
+
+   
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script src="script.js"></script>
+    <title>Travel Image Slider</title>
+    <style>
+        #slider {
+            width: 600px;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #mainImage {
+            width: 100%;
+            height: 100%;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="slider">
+        <img id="mainImage" src="image1.jpg" alt="Travel Image">
+    </div>
+    <div id="controls">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Digital Clock</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: absolute ;
+            align-items: center;
+            height: 40px;
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+        #clock {
+            font-size: 60px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">Load</div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+            let ampm = 'AM';
+            if (hours >= 12) {
+                ampm = 'PM';
+            }
+            if (hours > 12) {
+                hours -= 12;
+            }
+            if (hours === 0) {
+                hours = 12; 
+            }
+
+            
+            const formattedTime = `${Z(hours)}:${Z(minutes)}:${Z(seconds)} ${ampm}`;
+
+            document.getElementById("clock").textContent = formattedTime;
+        }
+
+
+        function Z(number) {
+            return number < 10 ? '0' + number : number;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>
